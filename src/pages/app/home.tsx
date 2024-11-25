@@ -3,6 +3,7 @@ export function Home() {
     <>
       <menu className="flex justify-between items-center">
         <div className="flex items-center gap-2">
+          <img src="/logo.png" alt="Logo" className="h-72 w-72" loading="lazy" />
           <h1 className="font-bold text-2xl">Carlos Máximo</h1>
         </div>
         <div className="flex items-center gap-2">
