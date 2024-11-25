@@ -1,10 +1,4 @@
-import { useSearchParams } from 'react-router-dom';
-
 export function Home() {
-  const [searchParams, _] = useSearchParams();
-
-  // const ref = searchParams.get('ref');
-
   return (
     <>
       <menu className="flex justify-between items-center">
