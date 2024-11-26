@@ -1,15 +1,18 @@
+import { Link } from 'react-router-dom';
+
 export function Home() {
   return (
     <>
       <menu className="flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Logo" className="h-72 w-72" loading="lazy" />
-          <h1 className="font-bold text-2xl">Carlos Máximo</h1>
+          <h1 className="font-bold text-2xl text-neutral-300">Carlos Máximo</h1>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="h-2 w-2 rounded-full bg-emerald-600 animate-pulse"></div>
-          <span className="text-xs font-medium">Disponível para trabalho</span>
-        </div>
+        <Link to="/contact">
+          <div className="flex items-center gap-2">
+            <div className="h-2 w-2 rounded-full bg-emerald-600 animate-pulse"></div>
+            <span className="text-xs font-medium">Disponível para trabalho</span>
+          </div>
+        </Link>
       </menu>
       <header className="mt-10 flex items-center gap-6">
         <img loading="lazy" alt="Carlos Máximo" src="https://github.com/carlosmax1.png" className="w-32 h-32 rounded-full" />
