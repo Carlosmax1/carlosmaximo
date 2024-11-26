@@ -1,6 +1,37 @@
 import { Link } from 'react-router-dom';
 
+import { Accordion, Roles } from '@/components/accordion';
+
 export function Home() {
+  const myRoles: Roles[] = [
+    {
+      title: 'Estagiário',
+      description: 'Monitoramento de sistemas e virtualização de servidores',
+      endAt: 2023,
+      startAt: 2022,
+      enterprise: 'Prodemge',
+      enterpriseUrl: 'https://www.prodemge.mg.gov.br/',
+      techs: ['Zabbix', 'Linux', 'VMWare', 'PowerBI'],
+    },
+    {
+      title: 'Desenvolvedor',
+      description: 'Desenvolvimento de aplicações web e mobile',
+      endAt: 2021,
+      startAt: 2023,
+      enterprise: 'Empresa Júnior InfoAlto',
+      enterpriseUrl: 'https://infoalto.com.br/',
+      techs: ['React', 'React Native', 'Node.js', 'WordPress', 'HTML', 'CSS', 'JavaScript'],
+    },
+    {
+      title: 'Técnico em Informática',
+      description: 'Manutenção de computadores e redes | Freelancer',
+      endAt: 2020,
+      startAt: 2018,
+      enterprise: 'Freelancer',
+      techs: ['Windows', 'Linux', 'Redes', 'Hardware'],
+    },
+  ];
+
   return (
     <>
       <menu className="flex justify-between items-center">
@@ -41,6 +72,7 @@ export function Home() {
               ></path>
             </svg>
           </div>
+          <Accordion roles={myRoles.sort((a, b) => (a.endAt - b.endAt ? 1 : -1))} />
         </section>
       </main>
       <footer></footer>

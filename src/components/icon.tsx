@@ -1,9 +1,9 @@
 import { icons } from 'lucide-react';
 
-const Icon = ({ name, color, size }: { name: keyof typeof icons; color: string; size: number }) => {
+const Icon = ({ name, color, size, id }: { name: keyof typeof icons; color: string; size: number; id?: string }) => {
   const LucideIcon = icons[name];
 
-  return <LucideIcon color={color} size={size} />;
+  return <LucideIcon id={id} color={color} size={size} />;
 };
 
 export { Icon };
