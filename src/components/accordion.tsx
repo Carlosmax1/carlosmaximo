@@ -3,6 +3,7 @@ import { motion, useAnimate, stagger } from 'framer-motion';
 
 import { Icon } from '@/components/icon';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 function useAccordionAnimate(isOpen: boolean) {
   const [scope, animate] = useAnimate();
@@ -26,6 +27,7 @@ export type Roles = {
   description: string;
   enterprise: string;
   enterpriseUrl?: string;
+  local: 'Remoto' | 'Presencial';
   techs: string[];
 };
 
@@ -53,6 +55,15 @@ export function Accordion({ roles }: AccordionProps) {
                   {role.startAt} - {role.endAt}
                 </p>
                 <p className="text-xs font-light mt-2 text-neutral-400">{role.description}</p>
+              </div>
+              <div>
+                <Link target="_blank" className="flex items-center gap-1 mb-1" to={role.enterpriseUrl ?? '#'}>
+                  <span className="font-semibold text-xs text-neutral-300">{role.enterprise}</span>
+                </Link>
+                <div className="flex items-center gap-1 ml-1">
+                  <Icon name="MapPin" size={10} color="#a3a3a3" />
+                  <span className="text-[0.6rem] font-thin">{role.local}</span>
+                </div>
               </div>
             </div>
           </li>
