@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'],
+        nunito: ['Nunito', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',

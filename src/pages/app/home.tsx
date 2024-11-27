@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { Accordion, Roles } from '@/components/accordion';
+import { Icon } from '@/components/icon';
 
 export function Home() {
   const myRoles: Roles[] = [
@@ -48,9 +49,13 @@ export function Home() {
       <header className="mt-10 flex items-center gap-6">
         <img loading="lazy" alt="Carlos Máximo" src="https://github.com/carlosmax1.png" className="w-32 h-32 rounded-full" />
         <div>
+          <span className="text-2xl mb-2.5">👋</span>
           <h2 className="text-md md:text-2xl font-bold bg-gradient-to-br from-white from-30% to-white/50 bg-clip-text text-transparent">Olá, sou o Carlos,</h2>
           <p className="font-light text-neutral-300 text-xs md:text-sm">desenolvedor fullstack, apaixonado por tecnologia e inovação</p>
-          <p className="mt-2 text-xs md:text-sm font-light inline-flex items-center text-neutral-200">Minas Gerais, Brasil</p>
+          <p className="mt-2 text-xs md:text-sm font-light inline-flex text-neutral-200 gap-1 items-center">
+            <Icon name="MapPin" size={14} color="#d3d3d3" />
+            Minas Gerais, Brasil
+          </p>
         </div>
       </header>
       <main>
