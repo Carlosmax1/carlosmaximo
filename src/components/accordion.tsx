@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
 import { motion, useAnimate, stagger } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { cn } from '@/lib/utils';
 
 import { Icon } from '@/components/icon';
-import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
 
 function useAccordionAnimate(isOpen: boolean) {
   const [scope, animate] = useAnimate();
   const staggerItems = stagger(0.1, { startDelay: 0.15 });
-
   useEffect(() => {
     animate('#accordion-icon', isOpen ? { rotate: -90 } : { rotate: 0 }, { duration: 0.3, ease: [0.25, 0.8, 0.5, 1] });
     animate('li', isOpen ? { opacity: 1, scale: 1, filter: 'blur(0px)' } : { opacity: 0, scale: 0.3, filter: 'blur(20px)' }, {
@@ -16,7 +15,6 @@ function useAccordionAnimate(isOpen: boolean) {
       delay: isOpen ? staggerItems : 0,
     });
   }, [isOpen, animate, staggerItems]);
-
   return scope;
 }
 
@@ -38,7 +36,6 @@ export type AccordionProps = {
 export function Accordion({ roles }: AccordionProps) {
   const [isOpen, setIsOpen] = useState(false);
   const scope = useAccordionAnimate(isOpen);
-
   return (
     <div className="mt-6" ref={scope}>
       <motion.button whileTap={{ scale: 0.97 }} className="flex items-center gap-2" onClick={() => setIsOpen((prevState) => !prevState)}>
@@ -56,11 +53,11 @@ export function Accordion({ roles }: AccordionProps) {
                 </p>
                 <p className="text-xs font-light mt-2 text-neutral-400">{role.description}</p>
               </div>
-              <div>
+              <div className="self-end justify-self-end">
                 <Link target="_blank" className="flex items-center gap-1 mb-1" to={role.enterpriseUrl ?? '#'}>
                   <span className="font-semibold text-xs text-neutral-300">{role.enterprise}</span>
                 </Link>
-                <div className="flex items-center gap-1 ml-1">
+                <div className="flex items-center gap-1">
                   <Icon name="MapPin" size={10} color="#a3a3a3" />
                   <span className="text-[0.6rem] font-thin">{role.local}</span>
                 </div>

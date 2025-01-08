@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import { Accordion, Roles } from '@/components/accordion';
 import { Icon } from '@/components/icon';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 export function Home() {
   const myRoles: Roles[] = [
@@ -74,6 +75,25 @@ export function Home() {
         </div>
       </header>
       <main>
+        <section id="projects" className="mt-10">
+          <h3 className="text-sm mb-3 font-light uppercase tracking-wider">Projetos</h3>
+          <Carousel
+            opts={{
+              align: 'start',
+            }}
+            className="w-full w-sm"
+          >
+            <CarouselContent>
+              {Array.from({ length: 6 }).map((_, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="size-52 border rounded-lg p-4">a</div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </section>
         <section className="mt-10" id="experience">
           <h3 className="text-xs mb-3 font-light uppercase tracking-wider text-black-400">Atualmente</h3>
           <div className="flex justify-between items-start mb-1">
