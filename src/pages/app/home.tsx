@@ -44,10 +44,10 @@ export function Home() {
         </div>
         <section className="mt-4" id="techs">
           <InfiniteSlider>
-            <img src="/techs/react.png" className="aspect-square w-[40px] rounded-[4px]" alt="01's image" />
-            <img src="/techs/ts.png" className="aspect-square w-[40px] rounded-[4px]" alt="02's image" />
-            <img src="/techs/android.png" className="aspect-square w-[40px] rounded-[4px]" alt="03's image" />
-            <img src="/techs/js.png" className="aspect-square w-[40px] rounded-[4px]" alt="04's image" />
+            <img src="/carlosmaximo/techs/react.png" className="aspect-square w-[40px] rounded-[4px]" alt="01's image" />
+            <img src="/carlosmaximo/techs/ts.png" className="aspect-square w-[40px] rounded-[4px]" alt="02's image" />
+            <img src="/carlosmaximo/techs/android.png" className="aspect-square w-[40px] rounded-[4px]" alt="03's image" />
+            <img src="/carlosmaximo/techs/js.png" className="aspect-square w-[40px] rounded-[4px]" alt="04's image" />
             <svg viewBox="0 0 24 24" className="aspect-square w-[40px] rounded-[4px] text-neutral-400">
               <path
                 d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
@@ -89,7 +89,7 @@ export function Home() {
                 fill="currentColor"
               ></path>
             </svg>
-            <img src="/techs/android.png" className="aspect-square size-4 rounded-[4px]" alt="03's image" />
+            <img src="/carlosmaximo/techs/android.png" className="aspect-square size-4 rounded-[4px]" alt="03's image" />
           </div>
         </section>
       </main>

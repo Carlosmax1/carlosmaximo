@@ -6,15 +6,15 @@ import { Contact } from './pages/app/contact';
 
 export const routes = createBrowserRouter([
   {
-    path: '/',
+    path: '/carlosmaximo',
     element: <AppLayout />,
     children: [
       {
-        path: '/',
+        path: '/carlosmaximo',
         element: <Home />,
       },
       {
-        path: '/contact',
+        path: '/carlosmaximo/contact',
         element: <Contact />,
       },
     ],
