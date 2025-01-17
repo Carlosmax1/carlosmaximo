@@ -2,16 +2,15 @@ import { Outlet } from 'react-router-dom';
 
 import { GoBack } from '@/components/goback';
 import { Footer } from '@/components/footer';
-import { SparklesCore } from '@/components/ui/sparkles';
 
 export function AppLayout() {
   return (
-    <div className="min-h-svh bg-neutral-900 font-nunito antialiased text-neutral-100">
+    <div className="min-h-svh bg-neutral-900 relative font-nunito antialiased text-neutral-100 bg-grid-small-white/[0.1]">
       <GoBack />
-      <SparklesCore speed={1} id="tsparticlesfullpage" background="transparent" minSize={0.6} maxSize={1.4} particleDensity={15} className="w-full h-full" particleColor="#FFFFFF" />
-      <div className="container mx-auto max-w-2xl px-4 py-8 absolute inset-0">
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-neutral-950 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <div className="container mx-auto max-w-2xl px-4 py-8 relative">
         <Outlet />
-        <Footer />
+        <Footer className="mt-10" />
       </div>
     </div>
   );
